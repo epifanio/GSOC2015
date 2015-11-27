@@ -1,0 +1,12 @@
+qrcode
+cartopy
+oceans
+nco
+ctd
+seawater
+pyepsg
+folium
+geopandas
+mpld3
+mplleaflet
+oct2py

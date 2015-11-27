@@ -1,0 +1,16 @@
+statsmodels
+paramiko
+matplotlib
+seaborn
+scikit-learn
+fiona
+rasterio
+xray
+sympy
+shapely
+astropy
+psycopg2
+vispy
+pyproj
+psutil
+pillow
