@@ -15,7 +15,7 @@ apt-get install -y ruby ruby-dev julia octave postgresql-9.3-postgis-2.1 \
 	postgresql-server-dev-9.3 libreadline6-dev mlocate pkg-config \
 		libfreetype6-dev tk8.4-dev tcl8.4-dev unzip cmake-curses-gui mapserver-bin wget gcc make python-dev python-pip
 
-# python modules to tun system python 2 kernel (needed for grass)
+# python modules to run system python 2 kernel (needed for grass)
 #/usr/bin/pip install ipykernel
 #/usr/bin/pip install decorator
 #/usr/bin/pip install ipython_genutils

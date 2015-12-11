@@ -18,10 +18,10 @@ RUN useradd -m -s /bin/bash main
 RUN echo "root:root" | chpasswd
 RUN echo "main:main" | chpasswd
 
-RUN wget --quiet https://github.com/krallin/tini/releases/download/v0.6.0/tini && \
-    echo "d5ed732199c36a1189320e6c4859f0169e950692f451c03e7854243b95f4234b *tini" | sha256sum -c - && \
-    mv tini /usr/local/bin/tini && \
-    chmod +x /usr/local/bin/tini
+#RUN wget --quiet https://github.com/krallin/tini/releases/download/v0.6.0/tini && \
+#    echo "d5ed732199c36a1189320e6c4859f0169e950692f451c03e7854243b95f4234b *tini" | sha256sum -c - && \
+#    mv tini /usr/local/bin/tini && \
+#    chmod +x /usr/local/bin/tini
 	
 
 USER main
@@ -57,7 +57,6 @@ RUN echo "host all  all    0.0.0.0/0  md5" >> /etc/postgresql/9.3/main/pg_hba.co
 RUN echo "listen_addresses='*'" >> /etc/postgresql/9.3/main/postgresql.conf
 
 EXPOSE 5432
-
 
 USER main
 
@@ -135,7 +134,7 @@ RUN updatedb
 
 USER main
 
-EXPOSE 8888
+#EXPOSE 8888
 
 ENV LD_LIBRARY_PATH /usr/lib/grass70/lib:/usr/local/lib:/usr/lib/:$LD_LIBRARY_PATH
 ENV PYTHONPATH /usr/lib/grass70/etc/python:$PYTHONPATH
@@ -146,6 +145,6 @@ ENV GISRC /home/main/.grass7/rc
 ENV GISDBASE /home/main/notebooks/data/grass7data/
 ENV OSSIM_PREFS_FILE /usr/local/share/ossim/ossim_preference
 
-WORKDIR /home/main/notebooks
-ENTRYPOINT ["tini", "--"]
-CMD ["/home/main/start-notebook.sh"]
+#WORKDIR /home/main/notebooks
+#ENTRYPOINT ["tini", "--"]
+#CMD ["/home/main/start-notebook.sh"]
