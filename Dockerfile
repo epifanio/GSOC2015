@@ -147,7 +147,7 @@ COPY docs/images /home/main/notebooks/GSOC/docs/images
 RUN chmod -R 777 /home/main/notebooks
 RUN chown -R main:main /home/main/notebooks
 
-RUN /usr/bin/pip install ipykernel
+#RUN /usr/bin/pip install ipykernel
 RUN /home/main/miniconda3/bin/conda clean -pt -y
 RUN rm -rf /tmp/*
 RUN apt-get clean
