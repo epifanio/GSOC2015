@@ -1,4 +1,4 @@
-FROM phusion/baseimage
+FROM andrewosh/binder-base
 
 MAINTAINER Massimo Di Stefano <epiesasha@me.com>
 
