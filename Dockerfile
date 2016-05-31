@@ -116,7 +116,7 @@ ADD install_script/requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
 
 #
-RUN pip install git+https://github.com/calysto/octave_kernel --user
+# RUN pip install git+https://github.com/calysto/octave_kernel --user
 
 COPY install_script/pygrass /home/main/.local/share/jupyter/kernels/pygrass
 
