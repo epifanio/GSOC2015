@@ -14,7 +14,7 @@ ENV LANG en_US.UTF-8
 #RUN /usr/bin/gem install fpm
 
 
-RUN useradd -m -s /bin/bash main
+#RUN useradd -m -s /bin/bash main
 RUN echo "root:root" | chpasswd
 RUN echo "main:main" | chpasswd
 
