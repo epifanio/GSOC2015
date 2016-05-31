@@ -11,7 +11,7 @@ echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen \
       && /usr/sbin/update-locale LANG=en_US.UTF-8
 
 # After this operation, 726 MB of additional disk space will be used.
-apt-get install -y ruby ruby-dev julia octave postgresql-9.3-postgis-2.1 rubygems-integration \
+apt-get install -y ruby ruby-dev julia octave postgresql-9.3-postgis-2.1 rubygems libgemplugin-ruby rubygems-integration \
 	postgresql-server-dev-9.3 libreadline6-dev mlocate pkg-config \
 		libfreetype6-dev tk8.4-dev tcl8.4-dev unzip cmake-curses-gui mapserver-bin wget gcc make python-dev python-pip
 
