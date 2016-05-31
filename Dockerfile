@@ -152,6 +152,7 @@ RUN /home/main/miniconda3/bin/conda clean -pt -y
 RUN rm -rf /tmp/*
 RUN apt-get clean
 
+RUN apt-get install -y mlocate
 RUN updatedb
 
 USER main
