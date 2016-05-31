@@ -47,6 +47,9 @@ USER root
 RUN useradd -m -s /bin/bash postgres
 RUN echo "postgres:postgres" | chpasswd
 
+ADD install_script/install_db.sh /tmp/install_db.sh
+RUN /tmp/install_db.sh
+
 USER postgres
 
 # start db and make new user and db (osgeo) listening from all host
