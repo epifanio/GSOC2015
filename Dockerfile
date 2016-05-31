@@ -135,8 +135,10 @@ RUN /tmp/cesiumwidget.sh
 
 USER root
 
-ADD install_script/install_ossim.sh /tmp/install_ossim.sh
-RUN /tmp/install_ossim.sh
+#ADD install_script/install_ossim.sh /tmp/install_ossim.sh
+#RUN /tmp/install_ossim.sh
+
+RUN apt-get install ossim-core
 
 RUN chmod a+x /home/main/start-notebook.sh
 ADD install_script/pgstart.sh /usr/local/bin/pgstart.sh
