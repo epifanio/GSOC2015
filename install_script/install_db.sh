@@ -1,6 +1,4 @@
 apt-get -qq update && apt-get -qq install -yq --no-install-recommends \
-                                                  python-software-properties \
-                                                  software-properties-common \
                                                   postgresql-9.4 \
                                                   postgresql-client-9.4 \
                                                   postgresql-contrib-9.4 \
