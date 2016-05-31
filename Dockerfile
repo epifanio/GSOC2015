@@ -47,8 +47,17 @@ USER root
 RUN useradd -m -s /bin/bash postgres
 RUN echo "postgres:postgres" | chpasswd
 
-ADD install_script/install_db.sh /tmp/install_db.sh
-RUN /tmp/install_db.sh
+
+
+RUN apt-get -qq update && apt-get -qq install -yq --no-install-recommends postgresql-9.4 \
+                                                  postgresql-client-9.4 \
+                                                  postgresql-contrib-9.4 \
+                                                  postgis postgresql-9.4-postgis-2.1 \
+                                                  postgresql-contrib \
+                                                  nano && apt-get clean
+                                                  
+#ADD install_script/install_db.sh /tmp/install_db.sh
+#RUN /tmp/install_db.sh
 
 USER postgres
 
