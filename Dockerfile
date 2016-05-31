@@ -42,6 +42,11 @@ COPY GSOC /home/main/notebooks/GSOC
 COPY docs/images /home/main/notebooks/GSOC/docs/images
 
 # setup postgresql
+USER root
+
+RUN useradd -m -s /bin/bash postgres
+RUN echo "postgres:postgres" | chpasswd
+
 USER postgres
 
 # start db and make new user and db (osgeo) listening from all host
