@@ -10,8 +10,8 @@ RUN /tmp/apt-get-update.sh
 ENV LC_ALL en_US.UTF-8
 ENV LANG en_US.UTF-8
 
-RUN /usr/bin/gem install gist
-RUN /usr/bin/gem install fpm
+#RUN /usr/bin/gem install gist
+#RUN /usr/bin/gem install fpm
 
 
 RUN useradd -m -s /bin/bash main
