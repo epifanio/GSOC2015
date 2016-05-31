@@ -70,8 +70,8 @@ RUN /etc/init.d/postgresql start &&\
 ADD install_script/natualearth.sh /tmp/natualearth.sh
 RUN /tmp/natualearth.sh
 
-RUN echo "host all  all    0.0.0.0/0  md5" >> /etc/postgresql/9.3/main/pg_hba.conf
-RUN echo "listen_addresses='*'" >> /etc/postgresql/9.3/main/postgresql.conf
+RUN echo "host all  all    0.0.0.0/0  md5" >> /etc/postgresql/9.4/main/pg_hba.conf
+RUN echo "listen_addresses='*'" >> /etc/postgresql/9.4/main/postgresql.conf
 
 EXPOSE 5432
 
