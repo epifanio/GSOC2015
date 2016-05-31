@@ -108,7 +108,7 @@ RUN conda install -y --file /tmp/condalist.txt
 ADD install_script/condalist-IOOS.txt /tmp/condalist-IOOS.txt
 RUN conda install -y -c IOOS --file /tmp/condalist-IOOS.txt
 
-
+RUN apt-get install libreadline6-dev
 ADD install_script/requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
 
