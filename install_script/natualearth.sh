@@ -18,4 +18,4 @@ psql natural_earth2 --quiet -c "vacuum analyze"
 
 psql main -c 'create extension postgis;'
 psql main \
-  -f /usr/share/postgresql/9.3/contrib/postgis-2.1/legacy.sql   
+  -f /usr/share/postgresql/9.4/contrib/postgis-2.1/legacy.sql   
